@@ -29,7 +29,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT rpg_id, rpgName, rpgClass, rpgElement from RPGCharacher";
+$sql = "SELECT rpg_id, rpgName, rpgClass, rpgElement from RPGCharacter";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
