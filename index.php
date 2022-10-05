@@ -10,7 +10,8 @@
     <tr>
       <th>ID</th>
       <th>Name</th>
-      <th>Age</th>
+      <th>Class</th>
+        <th>Element</th>
     </tr>
   </thead>
   <tbody>
