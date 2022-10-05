@@ -19,7 +19,7 @@
 $servername = "localhost";
 $username = "traeoucr_homework3User";
 $password = "mysqltt1024332";
-$dbname = "traeoucr_homework3";
+$dbname = "traeoucr_homework4";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -28,8 +28,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT instructor_id, instructor_name,instructor_age 
-from instructor";
+$sql = "SELECT rpg_id, rpgName, rpgClass, rpgElement from RPGCharacher";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -38,9 +37,10 @@ if ($result->num_rows > 0) {
 ?>
     
   <tr>
-    <td><?=$row["instructor_id"]?></td>
-    <td><?=$row["instructor_name"]?></td>
-    <td><?=$row["instructor_age"]?></td>
+    <td><?=$row["rpg_id"]?></td>
+    <td><?=$row["rpgName"]?></td>
+    <td><?=$row["rpgClass"]?></td>
+      <td><?=$row["rpgElement"]?></td>
   </tr>
     
 <?php
@@ -53,11 +53,7 @@ $conn->close();
   </tbody>
     </table>
     <h1>Commencing data mining!</h1>
-    <form action="instructor-section.php" method="get">
-Name: <input type="text" name="name"><br>
-E-mail: <input type="text" name="email"><br>
-<input type="submit">
-</form>
+   
     
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
