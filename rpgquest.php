@@ -11,10 +11,10 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th>ID</th>
-      <th>Prefix</th>
-      <th>Number</th>
-      <th>Description</th>
+      <th>Quest ID</th>
+      <th>Name of the Quest</th>
+      <th>Quest Description</th>
+      
       <th></th>
     </tr>
   </thead>
@@ -23,7 +23,7 @@
 $servername = "localhost";
 $username = "projecto_homework3";
 $password = "0w_zeP}]OVy0";
-$dbname = "projecto_homework3";
+$dbname = "projecto_homework4";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -40,14 +40,14 @@ if ($result->num_rows > 0) {
   while($row = $result->fetch_assoc()) {
 ?>
   <tr>
-    <td><?=$row["course_id"]?></td>
-    <td><?=$row["prefix"]?></td>
-    <td><?=$row["number"]?></td>
-    <td><?=$row["description"]?></td>
+    <td><?=$row["quest_id"]?></td>
+    <td><?=$row["questName"]?></td>
+    <td><?=$row["questDesc"]?></td>
+    
     <td>
-      <form method="post" action="course-section.php">
-        <input type="hidden" name="id" value="<?=$row["course_id"]?>" />
-        <input type="submit" value="Sections" />
+      <form method="post" action="characterquest.php">
+        <input type="hidden" name="id" value="<?=$row["quest_id"]?>" />
+        <input type="submit" value="Character Quest" />
       </form>
     </td>
   </tr>
