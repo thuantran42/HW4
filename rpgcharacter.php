@@ -41,6 +41,8 @@ if ($result->num_rows > 0) {
   <tr>
     <td><?=$row["rpg_id"]?></td>
     <td><a href="instructor-section.php?id=<?=$row["rpg_id"]?>"><?=$row["rpgName"]?></a></td>
+    <td><?=$row["rpgElement"]?></td>
+    <td><?=$row["rpgClass"]?></td>
   </tr>
 <?php
   }
