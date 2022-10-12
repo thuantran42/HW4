@@ -33,13 +33,13 @@ if ($conn->connect_error) {
 }
 $cid = $_POST['id'];
 //echo $iid;
-$sql = "select cqAcceptance_id, cqOffer, questName, char.rpgClass, char.rpgName 
+$sql = "select cqAcceptance_id, cqOffer, questName, rpgClass, rpgName 
 from RPGCharacterQuest cq
-join RPGCharacter char 
-on char.rpg_id = cq.rpg_id 
+join RPGCharacter ch 
+on ch.rpg_id = cq.rpg_id 
 join RPGQuest que
 on que.quest_id = cq.quest_id 
-where que.course_id=" . $cid;
+where que.quest_id=" . $cid;
 //echo $sql;
     $result = $conn->query($sql);
 
