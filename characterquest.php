@@ -31,7 +31,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
-$cid = $_POST['quest_id'];
+$cid = $_POST['id'];
 //echo $iid;
 $sql = "select cqAcceptance_id, cqOffer, questName, char.rpgClass, char.rpgName 
 from RPGCharacterQuest cq
