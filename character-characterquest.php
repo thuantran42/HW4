@@ -52,6 +52,7 @@ if ($result->num_rows > 0) {
   <tr>
     <td><?=$row["cqAcceptance_id"]?></td>
     <td><?=$row["cqOffer"]?></td>
+    <td><?=$row["questName"]?></td>
     <td><?=$row["rpgName"]?></td>
     <td><?=$row["questDesc"]?></td>
     <td><?=$row["questName"]?></td>
