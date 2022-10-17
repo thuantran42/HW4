@@ -10,9 +10,9 @@
     <h1>Add Character</h1>
 <form method="post" action="character-add-save.php">
   <div class="mb-3">
-    <label for="instructorName" class="form-label">Name</label>
-    <input type="text" class="form-control" id="instructorName" aria-describedby="nameHelp" name="iName">
-    <div id="nameHelp" class="form-text">Enter the instructor's name.</div>
+    <label for="rpgName" class="form-label">Name</label>
+    <input type="text" class="form-control" id="rpgName" aria-describedby="nameHelp" name="iName">
+    <div id="nameHelp" class="form-text">Enter the character's name.</div>
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
