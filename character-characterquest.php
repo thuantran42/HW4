@@ -42,11 +42,7 @@ JOIN RPGQuest q
 ON q.quest_id = cq.quest_id 
 WHERE q.quest_id =" . $iid;
 //echo $sql;
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param("i", $iid);
-    $stmt->execute();
-    $result = $stmt->get_result();
-
+    
 if ($result->num_rows > 0) {
   // output data of each row
   while($row = $result->fetch_assoc()) {
