@@ -14,9 +14,10 @@
       <th>Acceptance ID</th>
       <th>Offer</th>
       <th>Quest Name</th>
-      <th>Class</th>
       <th>Character Name</th>
-      <th>RPG ID</th>
+      <th>Quest Description</th>
+      <th>Quest Name</th>
+      
     </tr>
   </thead>
   <tbody>
@@ -42,7 +43,8 @@ JOIN RPGQuest q
 ON q.quest_id = cq.quest_id 
 WHERE q.quest_id =" . $iid;
 //echo $sql;
-    
+  $result = $conn->query($sql);
+
 if ($result->num_rows > 0) {
   // output data of each row
   while($row = $result->fetch_assoc()) {
@@ -50,10 +52,10 @@ if ($result->num_rows > 0) {
   <tr>
     <td><?=$row["cqAcceptance_id"]?></td>
     <td><?=$row["cqOffer"]?></td>
-    <td><?=$row["questName"]?></td>
-    <td><?=$row["rpgClass"]?></td>
     <td><?=$row["rpgName"]?></td>
-    <td><?=$row["rpg_id"]?></td>
+    <td><?=$row["questDesc"]?></td>
+    <td><?=$row["questName"]?></td>
+
   </tr>
 <?php
   }
@@ -64,6 +66,7 @@ $conn->close();
 ?>
   </tbody>
     </table>
+    <a class="btn btn-primary" href="index.php" role="button">Home</a>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
   </body>
 </html>
