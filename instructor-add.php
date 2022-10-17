@@ -3,12 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Add Instructor</title>
+    <title>Add Characters</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
   </head>
   <body>
-    <h1>Add Instructor</h1>
-<form method="post" action="instructor-add-save.php">
+    <h1>Add Character</h1>
+<form method="post" action="character-add-save.php">
   <div class="mb-3">
     <label for="instructorName" class="form-label">Name</label>
     <input type="text" class="form-control" id="instructorName" aria-describedby="nameHelp" name="iName">
