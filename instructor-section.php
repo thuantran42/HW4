@@ -12,10 +12,10 @@
   <thead>
     <tr>
       <th>Acceptance ID</th>
-      <th>Prefix</th>
-      <th>Number</th>
-      <th>Section</th>
-      <th>Instructor</th>
+      <th>Offer</th>
+      <th>Quest Name</th>
+      <th>Class</th>
+      <th>Character Name</th>
     </tr>
   </thead>
   <tbody>
