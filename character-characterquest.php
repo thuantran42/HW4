@@ -34,7 +34,7 @@ if ($conn->connect_error) {
 }
 $iid = $_GET['id'];
 //echo $iid;
-$sql = "select cqAcceptance_id, cqOffer, questName, rpgClass, rpgName , rpg_id
+$sql = "select cqAcceptance_id, cqOffer, questName, rpgClass, rpgName , ch.rpg_id
 from RPGCharacterQuest cq
 join RPGCharacter ch 
 on ch.rpg_id = cq.rpg_id 
