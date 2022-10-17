@@ -30,7 +30,7 @@
             <li><a class="dropdown-item" href="rpgcharacter.php">Characters</a></li>
            
             <li><a class="dropdown-item" href="character-cards.php">RPG Character cards</a></li>
-            <li><a class="dropdown-item" href="sections.php">Sections </a></li>
+            <li><a class="dropdown-item" href="characterquest.php">Character Quests </a></li>
             <li><a class="dropdown-item" href="rpgquest.php">Quests</a></li>
             
             
