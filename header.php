@@ -29,7 +29,7 @@
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="rpgcharacter.php">Characters</a></li>
            
-            <li><a class="dropdown-item" href="instructor-cards.php">Instructor info cards</a></li>
+            <li><a class="dropdown-item" href="character-cards.php">RPG Character cards</a></li>
             <li><a class="dropdown-item" href="sections.php">Sections </a></li>
             <li><a class="dropdown-item" href="rpgquest.php">Quests</a></li>
             
