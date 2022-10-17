@@ -22,7 +22,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT instructor_id, instructor_name from instructor";
+$sql = "SELECT rpg_id, rpg_name from RPGCharacter";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -34,7 +34,13 @@ if ($result->num_rows > 0) {
       <h5 class="card-title"><?=$row["instructor_name"]?></h5>
       <p class="card-text"><ul>
 <?php
-    $section_sql = "select c.description from section s join instructor i on i.instructor_id = s.instructor_id join course c on c.course_id = s.course_id where i.instructor_id=" . $row["instructor_id"];
+    $section_sql = "select c.description 
+    from section s 
+    join instructor i 
+    on i.instructor_id = s.instructor_id 
+    join course c 
+    on c.course_id = s.course_id 
+    where rpg_id=" . $row["rpg_id"];
     $section_result = $conn->query($section_sql);
     
     while($section_row = $section_result->fetch_assoc()) {
