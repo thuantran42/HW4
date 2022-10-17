@@ -11,7 +11,7 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th>ID</th>
+      <th>Acceptance ID</th>
       <th>Prefix</th>
       <th>Number</th>
       <th>Section</th>
@@ -21,9 +21,9 @@
   <tbody>
     <?php
 $servername = "localhost";
-$username = "projecto_homework3";
-$password = "0w_zeP}]OVy0";
-$dbname = "projecto_homework3";
+$username = "traeoucr_homework3User";
+$password = "mysqltt1024332";
+$dbname = "traeoucr_homework4";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -33,7 +33,13 @@ if ($conn->connect_error) {
 }
 $iid = $_GET['id'];
 //echo $iid;
-$sql = "select section_id, section_number, i.instructor_name, c.prefix, c.number from section s join instructor i on i.instructor_id = s.instructor_id join course c on c.course_id = s.course_id where i.instructor_id=?";
+$sql = "select cqAcceptance_id, cqOffer, questName, rpgClass, rpgName 
+from RPGCharacterQuest cq
+join RPGCharacter ch 
+on ch.rpg_id = cq.rpg_id 
+join RPGQuest que
+on que.quest_id = cq.quest_id 
+where que.quest_id=?";
 //echo $sql;
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("i", $iid);
@@ -45,11 +51,11 @@ if ($result->num_rows > 0) {
   while($row = $result->fetch_assoc()) {
 ?>
   <tr>
-    <td><?=$row["section_id"]?></td>
-    <td><?=$row["prefix"]?></td>
-    <td><?=$row["number"]?></td>
-    <td><?=$row["section_number"]?></td>
-    <td><?=$row["instructor_name"]?></td>
+    <td><?=$row["cqAcceptance_id"]?></td>
+    <td><?=$row["cqOffer"]?></td>
+    <td><?=$row["questName"]?></td>
+    <td><?=$row["rpgClass"]?></td>
+    <td><?=$row["rpgName"]?></td>
   </tr>
 <?php
   }
