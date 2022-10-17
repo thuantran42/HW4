@@ -16,6 +16,7 @@
       <th>Quest Name</th>
       <th>Class</th>
       <th>Character Name</th>
+      <th>RPG ID</th>
     </tr>
   </thead>
   <tbody>
@@ -33,7 +34,7 @@ if ($conn->connect_error) {
 }
 $iid = $_GET['id'];
 //echo $iid;
-$sql = "select cqAcceptance_id, cqOffer, questName, rpgClass, rpgName 
+$sql = "select cqAcceptance_id, cqOffer, questName, rpgClass, rpgName , rpg_id
 from RPGCharacterQuest cq
 join RPGCharacter ch 
 on ch.rpg_id = cq.rpg_id 
@@ -56,6 +57,7 @@ if ($result->num_rows > 0) {
     <td><?=$row["questName"]?></td>
     <td><?=$row["rpgClass"]?></td>
     <td><?=$row["rpgName"]?></td>
+    <td><?=$row["rpg_id"]?></td>
   </tr>
 <?php
   }
