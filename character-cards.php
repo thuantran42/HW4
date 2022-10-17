@@ -22,7 +22,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT rpg_id, rpg_name from RPGCharacter";
+$sql = "SELECT rpg_id, rpgName from RPGCharacter";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -31,7 +31,7 @@ if ($result->num_rows > 0) {
 ?>
    <div class="card">
     <div class="card-body">
-      <h5 class="card-title"><?=$row["instructor_name"]?></h5>
+      <h5 class="card-title"><?=$row["rpgName"]?></h5>
       <p class="card-text"><ul>
 <?php
     $section_sql = "select c.description 
