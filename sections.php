@@ -11,11 +11,11 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th>ID</th>
-      <th>Prefix</th>
-      <th>Number</th>
-      <th>Section</th>
-      <th>Instructor</th>
+      <th>Acceptance ID</th>
+      <th>Offer</th>
+      <thCharacter</th>
+      <th>Quest Description</th>
+      <th>Quest Name</th>
     </tr>
   </thead>
   <tbody>
@@ -32,12 +32,12 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "select section_id, section_number, i.instructor_name, c.prefix, c.number 
-from section s 
-join instructor i 
-on i.instructor_id = s.instructor_id 
-join course c 
-on c.course_id = s.course_id";
+$sql = "select cqAcceptance_id, cqOffer, rpgName, questDesc, questName 
+from RPGCharacter c 
+JOIN RPGCharacterQuest cq 
+ON c.rpg_id = cq.rpg_id 
+JOIN RPGQuest q 
+ON q.quest_id = cq.quest_id ";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -45,11 +45,11 @@ if ($result->num_rows > 0) {
   while($row = $result->fetch_assoc()) {
 ?>
   <tr>
-    <td><?=$row["section_id"]?></td>
-    <td><?=$row["prefix"]?></td>
-    <td><?=$row["number"]?></td>
-    <td><?=$row["section_number"]?></td>
-    <td><?=$row["instructor_name"]?></td>
+    <td><?=$row["cqAcceptance_id"]?></td>
+    <td><?=$row["cqOffer"]?></td>
+    <td><?=$row["rpgName"]?></td>
+    <td><?=$row["questDesc"]?></td>
+    <td><?=$row["questName"]?></td>
   </tr>
 <?php
   }
