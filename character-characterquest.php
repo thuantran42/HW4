@@ -34,13 +34,13 @@ if ($conn->connect_error) {
 }
 $iid = $_GET['id'];
 //echo $iid;
-$sql = "select cqAcceptance_id, cqOffer, questName, rpgClass, rpgName 
-from RPGCharacterQuest cq
-join RPGCharacter c
-on c.rpg_id = c.rpg_id 
-join RPGQuest q
-on q.quest_id = cq.quest_id 
-where cq.quest_id=" . $iid;
+$sql = "select cqAcceptance_id, cqOffer, rpgName, questDesc, questName 
+from RPGCharacter c 
+JOIN RPGCharacterQuest cq 
+ON c.rpg_id = cq.rpg_id 
+JOIN RPGQuest q 
+ON q.quest_id = cq.quest_id 
+WHERE q.quest_id =" . $iid;
 //echo $sql;
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("i", $iid);
