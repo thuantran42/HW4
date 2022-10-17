@@ -41,9 +41,9 @@ JOIN RPGCharacterQuest cq
 ON c.rpg_id = cq.rpg_id 
 JOIN RPGQuest q 
 ON q.quest_id = cq.quest_id 
-WHERE c.rpg_id =" . $iid;
+WHERE c.rpg_id =" . $iid; 
 //echo $sql;
-  $result = $conn->query($sql);
+  $result = $conn->query($sql); 
 
 if ($result->num_rows > 0) {
   // output data of each row
