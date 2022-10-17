@@ -11,9 +11,9 @@
 <div class="card-group">
     <?php
 $servername = "localhost";
-$username = "projecto_homework3";
-$password = "0w_zeP}]OVy0";
-$dbname = "projecto_homework3";
+$username = "traeoucr_homework3User";
+$password = "mysqltt1024332";
+$dbname = "traeoucr_homework4";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
