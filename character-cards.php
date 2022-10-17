@@ -34,13 +34,13 @@ if ($result->num_rows > 0) {
       <h5 class="card-title"><?=$row["rpgName"]?></h5>
       <p class="card-text"><ul>
 <?php
-    $section_sql = "select c.description 
-    from section s 
-    join instructor i 
-    on i.instructor_id = s.instructor_id 
-    join course c 
-    on c.course_id = s.course_id 
-    where rpg_id=" . $row["rpg_id"];
+    $section_sql = "select questDesc 
+    from RPGCharacter c 
+    JOIN RPGCharacterQuest cq 
+    ON c.rpg_id = cq.rpg_id 
+    JOIN RPGQuest q 
+    ON q.quest_id = cq.quest_id 
+    WHERE c.rpg_id =" . $row["rpg_id"];
     $section_result = $conn->query($section_sql);
     
     while($section_row = $section_result->fetch_assoc()) {
