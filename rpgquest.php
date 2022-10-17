@@ -45,7 +45,7 @@ if ($result->num_rows > 0) {
     <td><?=$row["questDesc"]?></td>
     
     <td>
-      <form method="post" action="characterquest.php">
+      <form method="post" action="quest-characterquest.php">
         <input type="hidden" name="id" value="<?=$row["quest_id"]?>" />
         <input type="submit" value="Character Quest" />
       </form>
