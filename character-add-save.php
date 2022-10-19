@@ -22,7 +22,7 @@ if ($conn->connect_error) {
 }
 $iName = $_POST['iName'];
 
-$sql = "insert into instructor (instructor_name) value (?)";
+$sql = "insert into RPGCharacter (rpgName) value (?)";
 //echo $sql;
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("s", $iName);
