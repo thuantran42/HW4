@@ -29,11 +29,11 @@ $sql = "insert into instructor (instructor_name) value (?)";
     $stmt->execute();
 ?>
     
-    <h1>Add Instructor</h1>
+    <h1>Add Character</h1>
 <div class="alert alert-success" role="alert">
-  New instructor added.
+  New character added.
 </div>
-    <a href="instructors.php" class="btn btn-primary">Go back</a>
+    <a href="characters.php" class="btn btn-primary">Go back</a>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
   </body>
 </html>
