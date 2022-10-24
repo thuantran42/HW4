@@ -34,12 +34,12 @@ if ($result->num_rows > 0) {
 <form method="post" action="rpgquest-edit-save.php">
   <div class="mb-3">
     <label for="offerAmount" class="form-label">Offer</label>
-    <input type="text" class="form-control" id="offerAmount" aria-describedby="nameHelp" name="oAmount" value="<?=$row['section_number']?>">
+    <input type="text" class="form-control" id="offerAmount" aria-describedby="nameHelp" name="oAmount" value="<?=$row['cqOffer']?>">
     <div id="nameHelp" class="form-text">Enter the section number.</div>
   </div>
   <div class="mb-3">
-  <label for="instructorList" class="form-label">Instructor</label>
-<select class="form-select" aria-label="Select instructor" id="instructorList" name="iid">
+  <label for="characterList" class="form-label">Instructor</label>
+<select class="form-select" aria-label="Select RPGCharacter" id="characterList" name="iid">
 <?php
     $instructorSql = "select * from instructor order by instructor_name";
     $instructorResult = $conn->query($instructorSql);
