@@ -16,7 +16,7 @@
       <th>Quest Name</th>
       <th>Character Name</th>
       <th>Quest Description</th>
-      <th>Quest Name</th>
+      
       
     </tr>
   </thead>
@@ -55,7 +55,7 @@ if ($result->num_rows > 0) {
     <td><?=$row["questName"]?></td>
     <td><?=$row["rpgName"]?></td>
     <td><?=$row["questDesc"]?></td>
-    <td><?=$row["questName"]?></td>
+    
 
   </tr>
 <?php
