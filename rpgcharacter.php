@@ -13,8 +13,8 @@
     <tr>
       <th>Character ID</th>
       <th>Character Name</th>
-      <th>Element</th>
-      <th>Class</th>
+      <th></th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
