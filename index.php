@@ -54,7 +54,7 @@ $conn->close();
   </tbody>
     </table>
     <h1>Time to go on an adventure! Huzzah!</h1>
-   <img src="https://images.app.goo.gl/fTvpZ8NrKeu3fstt9" alt="Huzzah Man" style="height:100px;" />
+   <img src="https://www.reddit.com/r/dndmemes/comments/p57er7/huzzah/" alt="Huzzah Man" style="height:100px;" />
     
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
