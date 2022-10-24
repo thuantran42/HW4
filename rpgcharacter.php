@@ -8,16 +8,7 @@
   </head>
   <body>
     <h1>RPG Characters</h1>
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th>Character ID</th>
-      <th>Character Name</th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
+
     <?php
 $servername = "localhost";
 $username = "traeoucr_homework3User";
