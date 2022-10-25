@@ -51,7 +51,7 @@ if ($result->num_rows > 0) {
         $selText = "";
       }
 ?>
-  <option value="<?=$instructorRow['rpg_id']?>"<?=$selText?>><?=$instructorRow['rpg_name']?></option>
+  <option value="<?=$instructorRow['rpg_id']?>"<?=$selText?>><?=$instructorRow['rpgName']?></option>
 <?php
     }
 ?>
