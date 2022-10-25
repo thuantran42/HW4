@@ -22,7 +22,7 @@ if ($conn->connect_error) {
 }
 $oAmount = $_POST['oAmount'];
 
-$sql = "update RPGCharacter set cqOffer=? where rpg_id=?";
+$sql = "update RPGCharacterQuest set cqOffer=? where rpg_id=?";
 //echo $sql;
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("si", $oAmount, $_POST['iid']);
