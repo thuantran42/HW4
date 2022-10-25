@@ -20,7 +20,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
-$iName = $_POST['iName'];
+$iName = $_POST['rpgName'];
 
 $sql = "update RPGCharacter set rpgName=? where rpg_id=?";
 //echo $sql;
