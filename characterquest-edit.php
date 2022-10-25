@@ -38,7 +38,7 @@ if ($result->num_rows > 0) {
     <div id="nameHelp" class="form-text">Enter the offer amount.</div>
   </div>
   <div class="mb-3">
-  <label for="characterList" class="form-label">Instructor</label>
+  <label for="characterList" class="form-label">Character</label>
 <select class="form-select" aria-label="Select RPGCharacter" id="characterList" name="iid">
 <?php
     $instructorSql = "select * from RPGCharacter 
