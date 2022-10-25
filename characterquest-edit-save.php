@@ -20,12 +20,12 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
-/* $rpgName = $_POST['rpgName']; */
+$rpgName = $_POST['rpgName'];
 
 $sql = "update RPGCharacter set rpgName=? where rpg_id=?";
 //echo $sql;
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("si", /* $rpgName,*/ $_POST['iid']);
+    $stmt->bind_param("si", $rpgName, $_POST['iid']);
     $stmt->execute();
 ?>
     
