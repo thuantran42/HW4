@@ -71,7 +71,7 @@ if ($result->num_rows > 0) {
           
           <tr>
             <td><?=$row["clothes_id"]?></td>
-            <td><?=$row["clothes_id"]?>"><?=$row["clothes_name"]?></td>
+            <td><?=$row["clothes_name"]?></td>
             <td>
               <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#editClothes<?=$row["clothes_id"]?>">
                 Edit
