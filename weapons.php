@@ -48,7 +48,7 @@
     }
     ?>
 
-    <h1> RPG Clothes</h1>
+    <h1> RPG Weapons</h1>
     <table class="table table-striped">
         <thead>
             <tr>
