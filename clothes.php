@@ -76,21 +76,21 @@ if ($result->num_rows > 0) {
               <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#editClothes<?=$row["clothes_id"]?>">
                 Edit
               </button>
-              <div class="modal fade" id="editCharacter<?=$row["clothes_id"]?>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="editCharacter<?=$row["rpg_id"]?>Label" aria-hidden="true">
+              <div class="modal fade" id="editClothes<?=$row["clothes_id"]?>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="editClothes<?=$row["clothes_id"]?>Label" aria-hidden="true">
                 <div class="modal-dialog">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h1 class="modal-title fs-5" id="editCharacter<?=$row["rpg_id"]?>Label">Edit Character</h1>
+                      <h1 class="modal-title fs-5" id="editClothes<?=$row["clothes_id"]?>Label">Edit Clothes</h1>
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                       <form method="post" action="">
                         <div class="mb-3">
-                          <label for="editCharacter<?=$row["rpg_id"]?>Name" class="form-label">Name</label>
-                          <input type="text" class="form-control" id="editCharacter<?=$row["rpg_id"]?>Name" aria-describedby="editCharacter<?=$row["rpg_id"]?>Help" name="iName" value="<?=$row['rpgName']?>">
-                          <div id="editCharacter<?=$row["rpg_id"]?>Help" class="form-text">Enter the character's name.</div>
+                          <label for="editClothes<?=$row["clothes_id"]?>Name" class="form-label">Name</label>
+                          <input type="text" class="form-control" id="editClothes<?=$row["clothes_id"]?>Name" aria-describedby="editClothes<?=$row["clothes_id"]?>Help" name="iName" value="<?=$row['clothes_name']?>">
+                          <div id="editClothes<?=$row["clothes_id"]?>Help" class="form-text">Enter the clothes's name.</div>
                         </div>
-                        <input type="hidden" name="iid" value="<?=$row['rpg_id']?>">
+                        <input type="hidden" name="iid" value="<?=$row['clothes_id']?>">
                         <input type="hidden" name="saveType" value="Edit">
                         <input type="submit" class="btn btn-primary" value="Submit">
                       </form>
@@ -101,7 +101,7 @@ if ($result->num_rows > 0) {
             </td>
             <td>
               <form method="post" action="">
-                <input type="hidden" name="iid" value="<?=$row["rpg_id"]?>" />
+                <input type="hidden" name="iid" value="<?=$row["clothes_id"]?>" />
                 <input type="hidden" name="saveType" value="Delete">
                 <input type="submit" class="btn" onclick="return confirm('Are you sure?')" value="Delete">
               </form>
@@ -125,19 +125,19 @@ $conn->close();
       </button>
 
       <!-- Modal -->
-      <div class="modal fade" id="addCharacter" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="addCharacterLabel" aria-hidden="true">
+      <div class="modal fade" id="addClothes" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="addClothesLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h1 class="modal-title fs-5" id="addCharacterLabel">Add Character</h1>
+              <h1 class="modal-title fs-5" id="addClothesLabel">Add Character</h1>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
               <form method="post" action="">
                 <div class="mb-3">
-                  <label for="CharacterName" class="form-label">Name</label>
-                  <input type="text" class="form-control" id="CharacterName" aria-describedby="nameHelp" name="iName">
-                  <div id="nameHelp" class="form-text">Enter the Character's name.</div>
+                  <label for="ClothesName" class="form-label">Name</label>
+                  <input type="text" class="form-control" id="ClothesName" aria-describedby="nameHelp" name="iName">
+                  <div id="nameHelp" class="form-text">Enter the Clothes's name.</div>
                 </div>
                 <input type="hidden" name="saveType" value="Add">
                 <button type="submit" class="btn btn-primary">Submit</button>
