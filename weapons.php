@@ -76,8 +76,7 @@
               <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#editWeapons<?=$row["weapon_id"]?>">
                         Edit
                     </button>
-                    <div class="modal fade" id="editWeapons<?=$row["weapon_id"]?>
-                        " data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="editWeapons<?=$row["weapon_id"]?>Label" aria-hidden="true">
+                    <div class="modal fade" id="editWeapons<?=$row["weapon_id"]?>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="editWeapons<?=$row["weapon_id"]?>Label" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
