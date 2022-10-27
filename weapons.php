@@ -70,27 +70,26 @@
             ?>
 
             <tr>
-                <td><?=$row["weapon_id"]?></td>
-                <td><?=$row["weapon_name"]?></td>
-                <td>
-                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#editClothes<?=$row["weapon_id"]?>
-                        ">
+            <td><?=$row["weapon_id"]?></td>
+            <td><?=$row["weapon_name"]?></td>
+            <td>
+              <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#editWeapons<?=$row["weapon_id"]?>">
                         Edit
                     </button>
-                    <div class="modal fade" id="editClothes<?=$row[" weapon_id"]?>
-                        " data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="editClothes<?=$row["weapon_id"]?>Label" aria-hidden="true">
+                    <div class="modal fade" id="editWeapons<?=$row["weapon_id"]?>
+                        " data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="editWeapons<?=$row["weapon_id"]?>Label" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="editClothes<?=$row["weapon_id"]?>Label">Edit Weapon</h1>
+                                    <h1 class="modal-title fs-5" id="editWeapons<?=$row["weapon_id"]?>Label">Edit Weapon</h1>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
                                     <form method="post" action="">
                                         <div class="mb-3">
-                                            <label for="editClothes<?=$row["weapon_id"]?>Name" class="form-label">Name</label>
-                                            <input type="text" class="form-control" id="editClothes<?=$row[" weapon_id"]?>Name" aria-describedby="editClothes<?=$row["weapon_id"]?>Help" name="iName" value="<?=$row['weapon_name']?>">
-                                            <div id="editClothes<?=$row[" weapon_id"]?>Help" class="form-text">Enter the weapon's name.</div>
+                                            <label for="editWeapons<?=$row["weapon_id"]?>Name" class="form-label">Name</label>
+                                            <input type="text" class="form-control" id="editWeapons<?=$row[" weapon_id"]?>Name" aria-describedby="editWeapons<?=$row["weapon_id"]?>Help" name="iName" value="<?=$row['weapon_name']?>">
+                                            <div id="editWeapons<?=$row["weapon_id"]?>Help" class="form-text">Enter the weapon's name.</div>
                                         </div>
                                         <input type="hidden" name="iid" value="<?=$row['weapon_id']?>">
                                         <input type="hidden" name="saveType" value="Edit">
@@ -122,23 +121,23 @@
     </table>
     <br />
     <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addClothes">
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addWeapons">
         Add New
     </button>
 
     <!-- Modal -->
-    <div class="modal fade" id="addClothes" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="addClothesLabel" aria-hidden="true">
+    <div class="modal fade" id="addWeapons" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="addWeaponsLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="addClothesLabel">Add Weapon</h1>
+                    <h1 class="modal-title fs-5" id="addWeaponsLabel">Add Weapon</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <form method="post" action="">
                         <div class="mb-3">
-                            <label for="ClothesName" class="form-label">Name</label>
-                            <input type="text" class="form-control" id="ClothesName" aria-describedby="nameHelp" name="iName">
+                            <label for="WeaponsName" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="WeaponsName" aria-describedby="nameHelp" name="iName">
                             <div id="nameHelp" class="form-text">Enter the Weapon's name.</div>
                         </div>
                         <input type="hidden" name="saveType" value="Add">
