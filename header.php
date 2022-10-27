@@ -27,11 +27,14 @@
             Dropdown
           </a>
           <ul class="dropdown-menu">
+            
             <li><a class="dropdown-item" href="rpgcharacter.php">Characters</a></li>
-           
             <li><a class="dropdown-item" href="character-cards.php">RPG Character cards</a></li>
             <li><a class="dropdown-item" href="characterquest.php">Character Quests </a></li>
             <li><a class="dropdown-item" href="rpgquest.php">Quests</a></li>
+            <li><a class="dropdown-item" href="clothes.php">Clothes</a></li>
+            <li><a class="dropdown-item" href="shoes.php">Shoes</a></li>
+            <li><a class="dropdown-item" href="weapons.php">Weapons</a></li>
             
             
           </ul>
