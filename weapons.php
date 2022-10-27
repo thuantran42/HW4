@@ -31,7 +31,7 @@
     echo '<div class="alert alert-success" role="alert">New weapon added.</div>';
     break;
     case 'Edit':
-    $sqlEdit = "update RPGWeapons set weapon_name=? where weapon_id=?";
+    $sqlEdit = "update RPGWeapon set weapon_name=? where weapon_id=?";
     $stmtEdit = $conn->prepare($sqlEdit);
     $stmtEdit->bind_param("si", $_POST['iName'], $_POST['iid']);
     $stmtEdit->execute();
