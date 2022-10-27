@@ -88,7 +88,7 @@
                                     <form method="post" action="">
                                         <div class="mb-3">
                                             <label for="editWeapons<?=$row["weapon_id"]?>Name" class="form-label">Name</label>
-                                            <input type="text" class="form-control" id="editWeapons<?=$row[" weapon_id"]?>Name" aria-describedby="editWeapons<?=$row["weapon_id"]?>Help" name="iName" value="<?=$row['weapon_name']?>">
+                                            <input type="text" class="form-control" id="editWeapons<?=$row["weapon_id"]?>Name" aria-describedby="editWeapons<?=$row["weapon_id"]?>Help" name="iName" value="<?=$row['weapon_name']?>">
                                             <div id="editWeapons<?=$row["weapon_id"]?>Help" class="form-text">Enter the weapon's name.</div>
                                         </div>
                                         <input type="hidden" name="iid" value="<?=$row['weapon_id']?>">
