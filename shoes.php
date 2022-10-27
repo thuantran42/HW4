@@ -61,7 +61,7 @@
         <tbody>
 
             <?php
-            $sql = "SELECT shoe_id, shoe_name from RPGClothes";
+            $sql = "SELECT shoe_id, shoe_name from RPGShoe";
             $result = $conn->query($sql);
 
             if ($result->num_rows > 0) {
