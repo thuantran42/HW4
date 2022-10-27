@@ -70,15 +70,14 @@
             ?>
 
             <tr>
-                <td><?=$row["shoe_id"]?></td>
-                <td><?=$row["shoe_name"]?></td>
-                <td>
-                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#editShoes<?=$row[" shoe_id"]?>
-                        ">
+            <td><?=$row["shoe_id"]?></td>
+            <td><?=$row["shoe_name"]?></td>
+            <td>
+              <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#editShoe<?=$row["shoe_id"]?>">
                         Edit
                     </button>
-                    <div class="modal fade" id="editShoes<?=$row[" shoe_id"]?>
-                        " data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="editShoes<?=$row["shoe_id"]?>Label" aria-hidden="true">
+                    <div class="modal fade" id="editShoe<?=$row[" shoe_id"]?>
+                        " data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="editShoe<?=$row["shoe_id"]?>Label" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
