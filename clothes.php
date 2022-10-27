@@ -120,7 +120,7 @@ $conn->close();
       </table>
       <br />
       <!-- Button trigger modal -->
-      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addCharacter">
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addClothes">
         Add New
       </button>
 
@@ -129,7 +129,7 @@ $conn->close();
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h1 class="modal-title fs-5" id="addClothesLabel">Add Character</h1>
+              <h1 class="modal-title fs-5" id="addClothesLabel">Add Clothes</h1>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
